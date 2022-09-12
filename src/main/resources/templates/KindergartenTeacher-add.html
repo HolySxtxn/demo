@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+
+<form th:action="${'/KindergartenTeacher/add'}" method="post">
+    <input type="text" name="name" placeholder="name"><br>
+    <input type="text" name="surname" placeholder="surname"><br>
+    <input type="text" name="patronymic" placeholder="patronymic"><br>
+    <input type="number" name="age" placeholder="age"><br>
+    <input type="text" name="groupp" placeholder="groupp"><br>
+    <button type="submit">Добавить</button>
+
+</form>
+
+</body>
+</html>

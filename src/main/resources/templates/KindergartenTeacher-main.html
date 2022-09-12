@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Все Воспитатели</h1>
+<a href="/KindergartenTeacher/filter">Поиск Воспитателя</a>
+<a href="/KindergartenTeacher/add">Добавить Воспитателя</a>
+<div th:each="el : ${KindergartenTeachers}">
+    <h5>---------------------------------------------------------</h5>
+    <h4 th:text="${'ФИО: '+el.getName()}" style="display: inline-block;margin-left: 10px"></h4>
+    <h4 th:text="${el.getSurname()}" style="display: inline-block"></h4>
+    <h4 th:text="${el.getPatronymic()}" style="display: inline-block"></h4>
+    <h5 th:text="${'Группа: '+el.getAge()}" style="margin-left: 10px"></h5>
+    <h5 th:text="${'Дата рождения: '+el.getGroupp()}" style="margin-left: 10px"></h5>
+    <h5><a th:href="'/KindergartenTeacher/' + ${el.id}"> Подробнее </a></h5>
+</div>
+</body>
+</html>
